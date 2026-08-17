@@ -109,3 +109,8 @@ GROUP BY mes_ano, formato_midia
  alt="IMG_1020" src="https://github.com/user-attachments/assets/3d8b5022-02da-4692-bd26-c6208de3f341" />
 
 
+---
+
+Aplicando os insights que a própria análise revelou, o engajamento e as impressões saltaram mais de +459% em relação ao formato antigo.
+Quando você resolve um problema real com dados, o resultado aparece na prática.
+Assista ao video para ver a estrutura dos dados e me conte nos comentários: qual formato você achava que dava mais tração?
