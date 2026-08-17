@@ -1,0 +1,57 @@
+import requests
+import pandas as pd
+
+
+df = pd.read_excel('Pasta (3).xlsx')
+
+
+df.info()
+df.describe()
+df.columns
+df.shape
+df.head(1)
+df.tail(1)
+
+
+
+df['Data_Post'] = pd.to_datetime(df['Data_Post']).dt.date
+
+df['Reposts'] = df['Reposts'].fillna(0)
+
+df['Reposts'] = df['Reposts'].astype(int)
+
+df['Categoria'] = df['Categoria'].str.replace('data analyst', 'analista de dados')
+df['Categoria'] = df['Categoria'].str.replace('data scientist', 'cientista de dados')
+
+df['Categoria'] = df['Categoria'].str.replace('data engineer', 'engenheiro de dados')
+df['Categoria'] = df['Categoria'].str.replace('data architect', 'arquiteto de dados')
+df['Categoria'] = df['Categoria'].str.replace('data science', 'cientista de dados')
+df['Categoria'] = df['Categoria'].str.replace('data analyst', 'analista de dados')
+df['Categoria'] = df['Categoria'].astype(str).str.lower()
+df['Plataforma'] = df['Plataforma'].astype(str).str.lower()
+df['Tipo'] = df['Tipo'].str.replace('link', 'descricao')
+df['Tipo'] = df['Tipo'].astype(str).str.lower()
+df['Tipo'] = df['Tipo'].str.replace('vídeo', 'video')
+df['Tipo'] = df['Tipo'].str.replace('imagem/descricao', 'imagem')
+df['Tipo'] = df['Tipo'].str.replace('video/descricao', 'video')
+df['Categoria'] = df['Categoria'].str.replace('data engineer', 'engenheiro de dados')
+df['Categoria'] = df['Categoria'].str.replace('data architect', 'arquiteto de dados')
+df['Categoria'] = df['Categoria'].str.replace('data science', 'cientista de dados')
+df['Categoria'] = df['Categoria'].str.replace('data analyst', 'analista de dados')
+df['Categoria'] = df['Categoria'].str.replace('data scientist', 'cientista de dados')
+
+
+
+
+import duckdb
+
+df = df.drop(columns=['index'], errors='ignore')
+
+con = duckdb.connect("md:?motherduck_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbGViZWZlcnJlaXJhMDAxMTFAZ21haWwuY29tIiwibWRSZWdpb24iOiJhd3MtdXMtZWFzdC0xIiwic2Vzc2lvbiI6ImNhbGViZWZlcnJlaXJhMDAxMTEuZ21haWwuY29tIiwicGF0IjoiT2xMXzJxWUt3cHpBM01WYmZTQkRaNXpaTktpUkJXdjFLcko1MWlybTJWUSIsInVzZXJJZCI6IjI5MTBjYTRiLTMxN2EtNDYxMC04ZjVhLTEwMzAzMjJmZTJlMyIsImlzcyI6Im1kX3BhdCIsInJlYWRPbmafx5IjpmYWxzZSwidG9rZW5UeXBlIjoicmVhZF93cml0ZSIsImlhdCI6MTc4NjY2MDQwN30.Lq-1yARt3XqFUUU6BbTF7Oih-a7zWqhRlUo3ti5vC5o")
+
+con.sql("CREATE OR REPLACE TABLE tb_posts AS SELECT * FROM df")
+
+con.close()
+print("🚀 Enviado com sucesso!")
+
+df.to_excel('LinkedIn.xlsx')
