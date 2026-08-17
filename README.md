@@ -16,19 +16,10 @@
 
 ---
 
-## 🎯 1. O Problema de Negócio (Business Case)
+## 🎯 1. O Problema
 
-> 📨 **Diagnóstico de Performance de Conteúdo**  
-> **De:** Estratégia de Conteúdo & Growth  
-> **Para:** Calebe Valério (Data Analyst / Analytics Engineer)  
-> **Assunto:** Otimização de Alcance Orgânico: Imagem vs. Vídeo  
->
-> Olá, Calebe!  
->
-> Nossas publicações no LinkedIn apresentam oscilações drásticas de alcance e engajamento. Precisamos entender com base em dados concretos — e não em achismos — quais fatores geram tração real: postagens em imagem (estáticas) ou vídeos explicativos?  
->
-> Sua missão é estruturar um pipeline completo de dados para limpar o histórico bruto de 50 postagens, modelar consultas analíticas em SQL e construir um painel executivo com indicadores de conversão, engajamento e alcance.  
->
+> Minhas publicações no LinkedIn apresentam oscilações drásticas de alcance e engajamento. Eu queria entender com base em dados concretos — e não em achismos — quais fatores geram tração real: postagens em imagem (estáticas) ou vídeos explicativos?  
+
 > **Requisitos do Pipeline:**
 > 1. Ingerir o histórico bruto de métricas de postagens (CSV/Excel).
 > 2. Tratar datas, validar consistência de métricas de interação e calcular taxas de engajamento via **Python (Pandas)**.
@@ -56,15 +47,8 @@
 
 ---
 
-## 📬 Diagnóstico Executivo & Principais Insights
 
-**De:** Calebe Valério (Data Analyst)  
-**Para:** Estratégia de Conteúdo & Growth  
-**Assunto:** Conclusão do Diagnóstico de Tração (Imagem vs. Vídeo)  
-
-Prezados, apresento os resultados da análise consolidada de performance após a higienização dos dados e modelagem SQL:
-
-* **Superioridade do Formato Vídeo (+459% de Alcance):** Publicações em vídeo entregaram uma média de impressões e engajamento significativamente superior às publicações estáticas em imagem, comprovando que o algoritmo do LinkedIn prioriza tempo de tela e retenção.
+ **Superioridade do Formato Vídeo (+459% de Alcance):** Publicações em vídeo entregaram uma média de impressões e engajamento significativamente superior às publicações estáticas em imagem, comprovando que o algoritmo do LinkedIn prioriza tempo de tela e retenção.
 * **Volume de Interações Qualificadas:** O formato em vídeo gerou uma proporção de comentários 4,8x maior, ampliando o alcance viral de segundo nível (conexões das conexões).
 * **Taxa Média de Engajamento:** Enquanto posts estáticos mantiveram uma taxa média de engajamento de ~3,8%, os posts em vídeo superaram a marca de 6,5% a 7,8%.
 * **Storytelling & Metodologia:** O uso de vídeos curtos demonstrando a execução prática de projetos foi o principal catalisador para converter visualizações casuais em novos seguidores e conexões estratégicas.
